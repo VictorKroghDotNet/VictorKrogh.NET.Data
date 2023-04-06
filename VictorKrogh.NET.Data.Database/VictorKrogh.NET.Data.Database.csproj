@@ -10,8 +10,4 @@
     <ProjectReference Include="..\VictorKrogh.NET.Data\VictorKrogh.NET.Data.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repository\" />
-  </ItemGroup>
-
 </Project>
