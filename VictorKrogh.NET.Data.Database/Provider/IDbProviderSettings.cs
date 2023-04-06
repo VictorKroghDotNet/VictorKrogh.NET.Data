@@ -2,5 +2,5 @@
 
 public interface IDbProviderSettings
 {
-    string ConnectionString { get; }
+    string? ConnectionString { get; }
 }
