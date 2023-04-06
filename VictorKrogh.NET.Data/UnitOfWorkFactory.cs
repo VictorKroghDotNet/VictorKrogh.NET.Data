@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System.Data;
+﻿using System.Data;
 
 namespace VictorKrogh.NET.Data;
 
