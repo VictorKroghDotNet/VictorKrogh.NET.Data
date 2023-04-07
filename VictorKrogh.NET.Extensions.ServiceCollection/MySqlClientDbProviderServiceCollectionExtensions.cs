@@ -11,7 +11,7 @@ public static class MySqlClientDbProviderServiceCollectionExtensions
     {
         var providerType = typeof(TProvider);
 
-        var providerInterfaceType = providerType.GetInterface($"I{providerType}");
+        var providerInterfaceType = providerType.GetInterface($"I{providerType.Name}");
 
         if (providerInterfaceType == null)
         {
