@@ -15,7 +15,7 @@ public static class RepositoryServiceCollectionExtensions
 
     public static IServiceCollection AddRepositories(this IServiceCollection services, Assembly assembly)
     {
-        var repositoryTypes = assembly.ExportedTypes.Where(t => t.IsAssignableTo(typeof(IRepository)));
+        var repositoryTypes = assembly.DefinedTypes.Where(t => t.IsAssignableTo(typeof(IRepository)));
 
         foreach(var repositoryType in repositoryTypes)
         {
