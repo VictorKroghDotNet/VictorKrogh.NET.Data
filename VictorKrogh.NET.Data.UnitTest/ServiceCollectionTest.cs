@@ -43,6 +43,24 @@ public class ServiceCollectionTest
     }
 
     [Test]
+    public Task Task_Unit_Of_Work()
+    {
+        try
+        {
+            var unitOfWork = ServiceProvider.GetRequiredService<IUnitOfWork>();
+
+            Assert.IsNotNull(unitOfWork);
+        }
+        catch (Exception ex)
+        {
+            Assert.Fail(ex.Message);
+
+        }
+
+        return Task.CompletedTask;
+    }
+
+    [Test]
     public Task Test_Unit_Of_Work_Get_Repository()
     {
         try
