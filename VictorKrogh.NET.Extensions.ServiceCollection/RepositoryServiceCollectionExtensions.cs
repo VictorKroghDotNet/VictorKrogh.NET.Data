@@ -21,7 +21,7 @@ public static class RepositoryServiceCollectionExtensions
         {
             var interfaceTypes = repositoryType.GetInterfaces();
 
-            var interfaceType = interfaceTypes.FirstOrDefault(i => i.IsInterface && (i.FullName?.Equals($"I{repositoryType.Name}") ?? false));
+            var interfaceType = interfaceTypes.FirstOrDefault(i => i.IsInterface && (i.Name?.Equals($"I{repositoryType.Name}") ?? false));
 
             if(interfaceType == default)
             {
