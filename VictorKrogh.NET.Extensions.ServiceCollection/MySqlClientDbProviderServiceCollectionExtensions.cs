@@ -28,7 +28,7 @@ public static class MySqlClientDbProviderServiceCollectionExtensions
         return services;
     }
 
-    public static IServiceCollection AddMySqlClientProviderFactory<TProvider>(this IServiceCollection services, MySqlClientDbProviderSettings mySqlClientDbProviderSettings)
+    public static IServiceCollection AddMySqlClientDbProviderFactory<TProvider>(this IServiceCollection services, MySqlClientDbProviderSettings mySqlClientDbProviderSettings)
         where TProvider : class, IMySqlClientDbProvider
     {
         services.AddScoped<IProviderFactory<TProvider>, MySqlClientDbProviderFactory<TProvider>>(serviceProvider =>
