@@ -16,10 +16,7 @@ public class ServiceCollectionTest
     [SetUp]
     public void Setup()
     {
-        var mysqlClientProviderSettings = new MySqlClientDbProviderSettings
-        {
-            ConnectionString = "Server=mysql37.unoeuro.com;Database=victorkrogh_dk_db_dev;Uid=victorkrogh_dk;Pwd=ngpz92afBGxyFkh4Hcrb;"
-        };
+        var mysqlClientProviderSettings = new MySqlClientDbProviderSettings();
 
         var serviceCollection = new ServiceCollection();
 
