@@ -6,6 +6,28 @@ namespace VictorKrogh.NET.Extensions.DependencyInjection;
 
 public static class MySqlClientDbProviderServiceCollectionExtensions
 {
+    public static IServiceCollection AddMySqlClientDbProvder<TProvider>(this IServiceCollection services)
+        where TProvider : class, IMySqlClientDbProvider
+    {
+        var providerType = typeof(TProvider);
+
+        var providerInterfaceType = providerType.GetInterface($"I{providerType}");
+
+        if (providerInterfaceType == null)
+        {
+            throw new Exception("?!");
+        }
+
+        services.AddScoped(providerInterfaceType, serviceProvider =>
+        {
+            var providerFactory = serviceProvider.GetRequiredService<IProviderFactory>();
+
+            return providerFactory.CreateProvider<TProvider>();
+        });
+
+        return services;
+    }
+
     public static IServiceCollection AddMySqlClientProviderFactory<TProvider>(this IServiceCollection services, MySqlClientDbProviderSettings mySqlClientDbProviderSettings)
         where TProvider : class, IMySqlClientDbProvider
     {
