@@ -9,6 +9,13 @@ public static class UnitOfWorkServiceCollectionExtensions
     {
         services.AddScoped<IUnitOfWorkFactory, UnitOfWorkFactory>();
 
+        services.AddScoped<IProviderFactory>(serviceProvider =>
+        {
+            var unitOfWorkFactory = serviceProvider.GetRequiredService<IUnitOfWorkFactory>();
+
+            return unitOfWorkFactory.Create();
+        });
+
         services.AddScoped<IUnitOfWork>(serviceProvider =>
         {
             var unitOfWorkFactory = serviceProvider.GetRequiredService<IUnitOfWorkFactory>();
