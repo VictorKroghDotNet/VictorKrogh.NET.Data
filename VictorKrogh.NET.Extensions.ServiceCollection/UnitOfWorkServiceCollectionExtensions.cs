@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using VictorKrogh.NET.Data;
+using VictorKrogh.NET.Data.Provider;
 
 namespace VictorKrogh.NET.Extensions.DependencyInjection;
 
