@@ -9,7 +9,7 @@ public interface IMockMySqlClientDbClientProvider : IMySqlClientDbProvider
 
 internal sealed class MockMySqlClientDbClientProvider : MySqlClientDbProviderBase, IMockMySqlClientDbClientProvider
 {
-    public MockMySqlClientDbClientProvider(IsolationLevel isolationLevel, MySqlClientDbProviderSettings mySqlClientDbProviderSettings) 
+    public MockMySqlClientDbClientProvider(IsolationLevel isolationLevel, MySqlClientDbProviderSettings mySqlClientDbProviderSettings)
         : base(isolationLevel, mySqlClientDbProviderSettings)
     {
     }

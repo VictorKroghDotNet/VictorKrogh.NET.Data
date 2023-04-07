@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using VictorKrogh.NET.Data.Database.Dapper.Provider.MySql;
-using VictorKrogh.NET.Data.Provider;
 using VictorKrogh.NET.Data.UnitTest.Mock;
 using VictorKrogh.NET.Extensions.DependencyInjection;
 
@@ -52,7 +51,7 @@ public class ServiceCollectionTest
 
             Assert.IsAssignableFrom<MockVKProjectRepository>(mockVKProjectRepository);
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
             Assert.Fail(ex.Message);
         }

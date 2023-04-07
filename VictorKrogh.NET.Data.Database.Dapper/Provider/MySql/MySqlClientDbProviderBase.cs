@@ -10,7 +10,7 @@ public interface IMySqlClientDbProvider : IDbProvider
 
 public abstract class MySqlClientDbProviderBase : DapperDbProviderBase, IMySqlClientDbProvider
 {
-    public MySqlClientDbProviderBase(IsolationLevel isolationLevel, MySqlClientDbProviderSettings mySqlClientDbProviderSettings) 
+    public MySqlClientDbProviderBase(IsolationLevel isolationLevel, MySqlClientDbProviderSettings mySqlClientDbProviderSettings)
         : base(isolationLevel)
     {
         MySqlClientDbProviderSettings = mySqlClientDbProviderSettings ?? throw new ArgumentNullException(nameof(mySqlClientDbProviderSettings));

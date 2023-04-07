@@ -1,5 +1,5 @@
-﻿using Dapper.Contrib.Extensions;
-using Dapper;
+﻿using Dapper;
+using Dapper.Contrib.Extensions;
 using System.Data;
 using VictorKrogh.NET.Data.Database.Provider;
 
@@ -7,7 +7,7 @@ namespace VictorKrogh.NET.Data.Database.Dapper.Provider;
 
 public abstract class DapperDbProviderBase : DbProviderBase
 {
-    protected DapperDbProviderBase(IsolationLevel isolationLevel) 
+    protected DapperDbProviderBase(IsolationLevel isolationLevel)
         : base(isolationLevel)
     {
     }

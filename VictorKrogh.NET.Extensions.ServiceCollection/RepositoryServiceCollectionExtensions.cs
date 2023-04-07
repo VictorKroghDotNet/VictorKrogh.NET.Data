@@ -17,13 +17,13 @@ public static class RepositoryServiceCollectionExtensions
     {
         var repositoryTypes = assembly.DefinedTypes.Where(t => t.IsAssignableTo(typeof(IRepository)));
 
-        foreach(var repositoryType in repositoryTypes)
+        foreach (var repositoryType in repositoryTypes)
         {
             var interfaceTypes = repositoryType.GetInterfaces();
 
             var interfaceType = interfaceTypes.FirstOrDefault(i => i.IsInterface && (i.Name?.Equals($"I{repositoryType.Name}") ?? false));
 
-            if(interfaceType == default)
+            if (interfaceType == default)
             {
                 continue;
             }
