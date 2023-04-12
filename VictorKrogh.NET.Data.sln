@@ -11,10 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VictorKrogh.NET.Data.Databa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VictorKrogh.NET.Data.UnitTest", "VictorKrogh.NET.Data.UnitTest\VictorKrogh.NET.Data.UnitTest.csproj", "{355C9163-4150-418A-9608-114F9B058EA1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VictorKrogh.NET.Extensions.ServiceCollection", "VictorKrogh.NET.Extensions.ServiceCollection\VictorKrogh.NET.Extensions.ServiceCollection.csproj", "{7240D2FC-610C-45CC-9630-F4B822249470}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VictorKrogh.NET.Data.Extensions.Autofac", "VictorKrogh.NET.Data.Extensions.Autofac\VictorKrogh.NET.Data.Extensions.Autofac.csproj", "{2CE0EA53-14D4-4BAC-8275-20DA65A40892}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,14 +33,6 @@ Global
 		{355C9163-4150-418A-9608-114F9B058EA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{355C9163-4150-418A-9608-114F9B058EA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{355C9163-4150-418A-9608-114F9B058EA1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7240D2FC-610C-45CC-9630-F4B822249470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7240D2FC-610C-45CC-9630-F4B822249470}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7240D2FC-610C-45CC-9630-F4B822249470}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7240D2FC-610C-45CC-9630-F4B822249470}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2CE0EA53-14D4-4BAC-8275-20DA65A40892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2CE0EA53-14D4-4BAC-8275-20DA65A40892}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2CE0EA53-14D4-4BAC-8275-20DA65A40892}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2CE0EA53-14D4-4BAC-8275-20DA65A40892}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

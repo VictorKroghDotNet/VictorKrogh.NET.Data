@@ -18,8 +18,4 @@
     <PackageReference Include="coverlet.collector" Version="3.1.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\VictorKrogh.NET.Extensions.ServiceCollection\VictorKrogh.NET.Extensions.ServiceCollection.csproj" />
-  </ItemGroup>
-
 </Project>
