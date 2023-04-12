@@ -7,7 +7,7 @@ public interface IUnitOfWorkFactory
     IUnitOfWork Create(IsolationLevel isolationLevel = IsolationLevel.ReadCommitted);
 }
 
-internal sealed class UnitOfWorkFactory : IUnitOfWorkFactory
+public sealed class UnitOfWorkFactory : IUnitOfWorkFactory
 {
     public UnitOfWorkFactory(IServiceProvider serviceProvider)
     {
