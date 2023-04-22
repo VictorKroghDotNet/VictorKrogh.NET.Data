@@ -12,6 +12,11 @@ public abstract class DapperDbProviderBase : DbProviderBase
     {
     }
 
+    public override string GetQualifiedTableName<TModel>()
+    {
+        return Connection.GetQualifiedTableName<TModel>();
+    }
+
     public override async Task<TModel?> GetAsync<TModel, TKey>(TKey key, int? commandTimeout = null)
         where TModel : class
     {
