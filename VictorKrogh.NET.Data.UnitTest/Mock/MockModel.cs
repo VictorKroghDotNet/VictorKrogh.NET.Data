@@ -7,3 +7,9 @@ namespace VictorKrogh.NET.Data.UnitTest.Mock;
 public class MockModel : DbModelBase
 {
 }
+
+[Table(nameof(MockModel))]
+[Schema(SqlProviderTests.TestingSchema)]
+public class MockSchemaModel : DbModelBase
+{
+}
