@@ -37,6 +37,8 @@ public abstract class DbProviderBase : ProviderBase, IDbProvider
 
     protected abstract IDbConnection CreateConnection();
 
+    public abstract string GetQualifiedTableName<TModel>() where TModel : DbModelBase;
+
     public abstract Task<TModel?> GetAsync<TModel, TKey>(TKey key, int? commandTimeout = null) where TModel : DbModelBase where TKey : notnull;
     public abstract Task<IEnumerable<TModel>> GetAllAsync<TModel>(int? commandTimeout = null) where TModel : DbModelBase;
     public abstract Task<bool> InsertAsync<TModel>(TModel model, int? commandTimeout = null) where TModel : DbModelBase;

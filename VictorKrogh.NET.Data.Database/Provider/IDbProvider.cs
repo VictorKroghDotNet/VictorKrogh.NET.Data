@@ -6,6 +6,8 @@ namespace VictorKrogh.NET.Data.Database.Provider;
 
 public interface IDbProvider : IProvider
 {
+    string GetQualifiedTableName<TModel>() where TModel : DbModelBase;
+
     Task<TModel?> GetAsync<TModel, TKey>(TKey key, int? commandTimeout = null) where TModel : DbModelBase where TKey : notnull;
     Task<IEnumerable<TModel>> GetAllAsync<TModel>(int? commandTimeout = null) where TModel : DbModelBase;
     Task<bool> InsertAsync<TModel>(TModel model, int? commandTimeout = null) where TModel : DbModelBase;
